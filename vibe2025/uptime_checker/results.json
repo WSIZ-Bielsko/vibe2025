@@ -1,0 +1,37 @@
+{
+  "check_timestamp": "2025-10-14T08:34:19.538651",
+  "results": [
+    {
+      "host": "google.com",
+      "port": 443,
+      "status": "available",
+      "timestamp": "2025-10-14T08:34:14.545246",
+      "error_message": null,
+      "response_time_ms": 10.7
+    },
+    {
+      "host": "github.com",
+      "port": 443,
+      "status": "available",
+      "timestamp": "2025-10-14T08:34:14.592944",
+      "error_message": null,
+      "response_time_ms": 58.3
+    },
+    {
+      "host": "10.10.0.1",
+      "port": 443,
+      "status": "error",
+      "timestamp": "2025-10-14T08:34:14.541703",
+      "error_message": "[Errno 111] Connect call failed ('10.10.0.1', 443)",
+      "response_time_ms": null
+    },
+    {
+      "host": "10.40.30.1",
+      "port": 22,
+      "status": "unavailable",
+      "timestamp": "2025-10-14T08:34:19.538580",
+      "error_message": "Connection timeout after 5.0s",
+      "response_time_ms": null
+    }
+  ]
+}

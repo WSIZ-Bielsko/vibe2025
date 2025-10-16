@@ -1,7 +1,7 @@
 import logging
 import requests
 from fastapi import HTTPException
-from vibe2025.cache import forex_cache
+from vibe2025.forex.cache import forex_cache
 
 logger = logging.getLogger(__name__)
 

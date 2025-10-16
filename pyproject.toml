@@ -7,11 +7,18 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+# common dependencies
 fastapi = "^0.115.0"
 uvicorn = {extras = ["standard"], version = "^0.32.0"}
 requests = "^2.32.0"
 pydantic = "^2.9.0"
 cachetools = "^5.3.0"
+# time-otp project
+pyotp = "^2.9.0"
+# secure storage project
+cryptography = "^46.0.2"
+# uptime-checker
+pydantic-settings = "^2.11.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.0"

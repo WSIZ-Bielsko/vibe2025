@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
-from vibe2025.main import app
-from vibe2025.cache import forex_cache
+from vibe2025.forex.main import app
+from vibe2025.forex.cache import forex_cache
 
 client = TestClient(app)
 

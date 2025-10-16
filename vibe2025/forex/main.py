@@ -1,8 +1,8 @@
 import logging
 from fastapi import FastAPI, HTTPException, Query
-from vibe2025.forex import get_exchange_rate
-from vibe2025.models import ConversionResponse
-from vibe2025.cache import forex_cache
+from vibe2025.forex.forex import get_exchange_rate
+from vibe2025.forex.models import ConversionResponse
+from vibe2025.forex.cache import forex_cache
 from decimal import Decimal, getcontext
 
 # Configure logging
@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('vibe2025.log'),
+        logging.FileHandler('../vibe2025.log'),
         logging.StreamHandler()
     ]
 )
