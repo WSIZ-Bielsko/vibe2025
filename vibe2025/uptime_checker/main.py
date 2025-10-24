@@ -10,7 +10,7 @@ from vibe2025.uptime_checker.models import MonitorResults
 async def monitor_services(config: AppConfig):
     """Main monitoring loop."""
 
-    # Load services from config file
+    # Load services from the config file
     services = config.load_services()
     print(f"Loaded {len(services)} services to monitor")
     print(f"Check interval: {config.check_interval_seconds}s")
@@ -41,7 +41,7 @@ async def monitor_services(config: AppConfig):
         print(f"Results: {available}/{len(results)} services available")
         print(f"Saved to: {results_path}\n")
 
-        # Wait for next check
+        # Wait for the next check
         await asyncio.sleep(config.check_interval_seconds)
 
 

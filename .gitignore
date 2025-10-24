@@ -1,6 +1,10 @@
 sandbox
 
 *.log
+results.json
+# signed documents
+*key.pem
+*sig_pair.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
