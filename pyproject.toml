@@ -19,6 +19,7 @@ pyotp = "^2.9.0"
 cryptography = "^46.0.2"
 # uptime-checker
 pydantic-settings = "^2.11.0"
+pgeocode = "^0.5.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.0"

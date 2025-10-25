@@ -2,13 +2,13 @@ from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 
-
 """
 Prompt:
 given a string in python, create functions sign_text and verify_signature, that would sign a sha256 of this text 
 and verify the signeture; for the signatures create functions to generate keys, save/load them from files
 
 """
+
 
 def generate_keys() -> rsa.RSAPrivateKey:
     """Generate RSA private key pair"""
@@ -19,7 +19,7 @@ def generate_keys() -> rsa.RSAPrivateKey:
     return private_key
 
 
-def save_private_key(private_key: rsa.RSAPrivateKey, filename, password=None):
+def save_private_key(private_key: rsa.RSAPrivateKey, filename: str, password: str = None) -> None:
     """Save private key to file with optional password protection"""
     encryption = (
         serialization.BestAvailableEncryption(password.encode())
@@ -37,7 +37,7 @@ def save_private_key(private_key: rsa.RSAPrivateKey, filename, password=None):
         f.write(pem)
 
 
-def save_public_key(private_key, filename):
+def save_public_key(private_key: rsa.RSAPrivateKey, filename: str) -> None:
     """Save public key to file"""
     public_key = private_key.public_key()
     pem = public_key.public_bytes(
@@ -49,8 +49,8 @@ def save_public_key(private_key, filename):
         f.write(pem)
 
 
-def load_private_key(filename, password=None):
-    """Load private key from file"""
+def load_private_key(filename, password=None) -> rsa.RSAPrivateKey:
+    """Load private key from a file"""
     with open(filename, 'rb') as f:
         private_key = serialization.load_pem_private_key(
             f.read(),
@@ -59,15 +59,15 @@ def load_private_key(filename, password=None):
     return private_key
 
 
-def load_public_key(filename):
+def load_public_key(filename: str) -> rsa.RSAPublicKey:
     """Load public key from file"""
     with open(filename, 'rb') as f:
         public_key = serialization.load_pem_public_key(f.read())
     return public_key
 
 
-def sign_text(text, private_key: rsa.RSAPrivateKey):
-    """Sign SHA-256 hash of text using private key"""
+def sign_text(text: str, private_key: rsa.RSAPrivateKey) -> bytes:
+    """Sign SHA-256 hash of the text using the private key"""
     message = text.encode()
 
     signature = private_key.sign(
@@ -82,9 +82,11 @@ def sign_text(text, private_key: rsa.RSAPrivateKey):
     return signature
 
 
-def verify_signature(text, signature, public_key):
+def verify_signature(text, signature, public_key) -> bool:
     """Verify signature of text using public key"""
     message = text.encode()
+    if not isinstance(signature, bytes):
+        return False
 
     try:
         public_key.verify(
@@ -99,7 +101,8 @@ def verify_signature(text, signature, public_key):
         return True
     except InvalidSignature:
         return False
-
+    except TypeError:
+        return False
 
 # Example usage
 if __name__ == "__main__":

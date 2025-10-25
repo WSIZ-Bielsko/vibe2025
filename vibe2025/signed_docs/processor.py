@@ -16,6 +16,9 @@ to create Signature objects for given Documents;
 also saving/loading (document,signature) pairs, verifying signatures
 """
 
+"""
+This is a de-facto client for working with Documents and Signatures.
+"""
 
 class DocumentProcessor:
     def __init__(self, private_key_path: str = None):
@@ -73,7 +76,7 @@ class DocumentProcessor:
         return pem.decode('utf-8')
 
     def _document_to_canonical_json(self, document: Document) -> str:
-        """Convert document to canonical JSON for signing"""
+        """Convert the document to canonical JSON for signing"""
         return document.model_dump_json(indent=None)
 
     def sign_document(self, document: Document, signator_id: int) -> Signature:
