@@ -1,0 +1,24 @@
+{
+  "document": {
+    "id": "b1ae3bd8-561a-4d35-863e-c5b2631facd9",
+    "parent_document_id": null,
+    "author_id": 40,
+    "addressee_id": 12,
+    "created_at": "2025-10-25T11:41:53.510969",
+    "content": [
+      {
+        "fixed_text": "Lorem ipsum",
+        "placeholder": "dolor sit",
+        "text": "dolor sit"
+      }
+    ]
+  },
+  "signature": {
+    "document_id": "b1ae3bd8-561a-4d35-863e-c5b2631facd9",
+    "json_version": "{\"id\":\"b1ae3bd8-561a-4d35-863e-c5b2631facd9\",\"parent_document_id\":null,\"author_id\":40,\"addressee_id\":12,\"created_at\":\"2025-10-25T11:41:53.510969\",\"content\":[{\"fixed_text\":\"Lorem ipsum\",\"placeholder\":\"dolor sit\",\"text\":\"dolor sit\"}]}",
+    "signator_id": 40,
+    "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArATBfb+S4F9sxyvcVw8a\nIfxroEJp0nujAVmEf5Oi7PahKFc4FvppJ+al2qRbwLixYF4EI6hdZ2w55OjrJR0D\nKV/5iX9/5TKZXBLmJQqCNK8WmfTZf07eSJJovmQWTQD+1ddFhZQuIL4knns46S+E\nw1mp/ZHLri+qiTOkIe2iAWpq+B2H+VphS+d/gK7TZ+yDaloXsMqviNQGxGQeG7ai\n434f+7TvbPA7UtRKCBBaRkOqnnsJ0LQCPdVJAuWbRcI6oDEbJ6hmeWcEHucDfHwX\nE1WdUGXFRY9oMsz8NHaJPBd4LXmVT9pXu8f8A0kDpdIVDXziggczR7D6EYdTaj7i\nIwIDAQAB\n-----END PUBLIC KEY-----\n",
+    "signature": "857683ba4e7b7dd14390d2b7c5a09aaa386499356c6aa527dd45de297a8636accc4a6b260d328fe23ffbe6aa2bb1d0f9a2156262ba4a9c7f90ee5878e66141cdf7b7fb1a7d823b88bb6d92ea721f936409444a76703e30c7b3ece9e76fdc238b83ddd7461cf2a53fa1613ab340038731f58674488294971a7ebdff2e7abd63f96cefab5c6d9b9958fa6140cc98560e3e364bd00be5d5327d5dfc4ffbe6d697bc62c87b7d02f96e1ced5a58d90ab5c8db221e40b01b3295164ecaa7c90894cf6a91ec12e8e1b4bcaec120f24c0e49ccc51e12f28a3e0a9fbd2aac3bd279279d70d65c1857e12fe3eb4cc693f083dd2faf390f50b9b8ee3d13070a1c94ad2d02fa",
+    "signed_at": "2025-10-25T11:42:07.182596"
+  }
+}

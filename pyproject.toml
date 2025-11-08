@@ -20,6 +20,8 @@ cryptography = "^46.0.2"
 # uptime-checker
 pydantic-settings = "^2.11.0"
 pgeocode = "^0.5.0"
+cx-freeze = "^8.4.1"
+typer = "^0.20.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.0"
